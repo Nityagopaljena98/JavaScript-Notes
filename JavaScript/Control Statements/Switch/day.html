@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Day Name</title>
+</head>
+
+<body>
+    <script>
+        main();
+        function main() {
+            let d1 = new Date();
+            let day = d1.getDay();
+            let toDay = 'today is' + ' ';
+
+            switch (day) {
+                case 1:
+                    toDay += 'sunaday';
+                    break;
+                case 2:
+                    toDay += 'monday';
+                    break;
+
+                case 3:
+                    toDay += 'tuesday';
+                    break;
+
+                case 4:
+                    toDay += 'wednesday';
+                    break;
+                case 5:
+                    toDay += 'thursday';
+                    break;
+
+                case 6:
+                    toDay += 'friday';
+                    break;
+                case 7:
+                    toDay += 'saturday';
+                    break;
+                default: 'Invalid Day';
+            }
+            console.log(toDay);
+        }
+    </script>
+</body>
+
+</html>

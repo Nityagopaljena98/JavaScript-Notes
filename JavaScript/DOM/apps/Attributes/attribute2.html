@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .one {
+            color: red;
+        }
+
+        .two {
+            background-color: yellow;
+        }
+
+        .three {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="one two">
+        <p>Attribute Method</p>
+    </div>
+
+
+    <script>
+
+        let divTag = document.querySelector('div');
+
+        divTag.classList.add('three');
+        // divTag.classList.remove('two');
+        console.log(divTag.classList.contains('one'));
+        //contains method is use to check if the properties is present or not (it return value in boolean).
+
+    </script>
+</body>
+
+</html>

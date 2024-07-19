@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title> FORM3</title>
+</head>
+
+<body>
+    <form id="reg-form">
+        <table align="center">
+            <tr>
+                <td colspan="2" align="center">
+                    <h2 style="color:green;">REGISTRATION FORM</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:orange;">First Name
+                <td><input type="text" placeholder="First Name" size="23" id="fn"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:orange;">Last Name
+                <td><input type="text" placeholder="Last Name" size="23" id="ln"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:orange;">Mobile Number
+                <td><input type="number" placeholder="Mobile Number" size="23" id="mob"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:orange;">Email Address
+                <td><input type="email" placeholder="Email Address" size="23" id="email"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:orange;">Password
+                <td><input type="text" placeholder="Password" size="23" id="pass"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color:orange;">Conform Password
+                <td><input type="text" placeholder="Conform Password" size="23" id="cpass"></td>
+            </tr>
+            <tr>
+                <td>
+            <tr>
+                <td>
+            <tr>
+                <td style="color:green;">DOB</td>
+                <td>
+                    <input type="date">
+                </td>
+
+            <tr>
+                <td colspan="2" align="center"><input type="submit" id="button"
+                        style="color:blue; margin-top: 10px; padding: 10px; background: black; color: white; font-size: 15px; border-radius: 5px;">
+                </td>
+            </tr>
+    </form>
+
+
+    <script>
+        let regForm = document.getElementById('reg-form');
+        let faName = document.getElementById('fn');
+        let lName = document.getElementById('ln');
+        let mobNo = document.getElementById('mobile');
+        let email = document.getElementById('email');
+        let pass = document.getElementById('pass');
+        let cpass = document.getElementById('cpass');
+
+        regForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            let firstname = faName.value;
+            let lastname = lName.value;
+            let mobile = mobNo.value;
+            let emailId = email.value;
+            let password = pass.value;
+            let confirmpass = cpass.value;
+
+            console.log(firstname, lastname, mobile, emailId, password, confirmpass);
+        });
+
+
+
+    </script>
+</body>
+
+</html>

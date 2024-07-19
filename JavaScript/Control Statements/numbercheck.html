@@ -1,0 +1,26 @@
+// write a program to check the type of number digit may be single, double and triple.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Number check</title>
+</head>
+
+<body>
+    <script>
+        main();
+        function main() {
+            let num = prompt('Enter a number');
+            if (num >= 0 && num <= 9) {
+                console.log(num + 'is a single digit');
+            } else if (num >= 9 && num <= 99) {
+                console.log(num + 'is a double digit');
+            } else if (num >= 99 && num <= 999) {
+                console.log(num + 'is a triple digit');
+            }
+        }
+    </script>
+</body>
+
+</html>

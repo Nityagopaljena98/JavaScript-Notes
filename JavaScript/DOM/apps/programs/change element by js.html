@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    div {
+        background-color: aqua;
+        color: black;
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    button {
+        padding: 10px 15px;
+        text-align: center;
+        margin-right: 10px;
+        border: 1px solid #adabab;
+        font-size: 15px;
+        font-weight: 400;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    button:hover {
+        background-color: black;
+        color: #fff;
+    }
+</style>
+
+<body>
+    <div>
+        <h1 id="display">Print Message</h1>
+        <br />
+        <button onclick="Hi();">HI</button>
+        <button onclick="Hello();">Hello</button>
+        <button onclick="Bye();">Bye</button>
+    </div>
+
+    <!-- Script Code  -->
+
+    <script>
+        function Hi() {
+            let printmsg = document.getElementById('display');
+            printmsg.textContent = 'HI';
+            printmsg.style.color = 'green';
+        }
+
+        function Hello() {
+            let printmsg = document.getElementById('display');
+            printmsg.textContent = 'Hello';
+            printmsg.style.color = 'green';
+        }
+
+        function Bye() {
+            let printmsg = document.getElementById('display');
+            printmsg.textContent = 'Bye';
+            printmsg.style.color = 'green';
+        }
+    </script>
+</body>
+
+</html>

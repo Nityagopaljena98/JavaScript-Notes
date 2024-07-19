@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        main();
+        function main() {
+            let year = prompt('Enter a year');
+            let month = Number(prompt('Enter a month number')); // Convert to integer
+
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    console.log(`${year} ===> ${month} ===> 31 days`);
+                    break;
+
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    console.log(`${year} ===> ${month} ===> 30 days`);
+                    break;
+
+                case 2:
+                    if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0))
+                        console.log(`${year} ===> ${month} ===> 29 days`);
+                    else
+                        console.log(`${year} ===> ${month} ===> 28 days`);
+                    break;
+
+                default:
+                    console.log('Invalid month');
+            }
+        }
+    </script>
+</body>
+
+</html>

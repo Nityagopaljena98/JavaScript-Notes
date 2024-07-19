@@ -1,0 +1,29 @@
+// check input value is a uppercase, lowercase, number or special symbol.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        main();
+        function main() {
+            let a = prompt('Enter any one number or letter');
+
+            if (a >= 'A' && a <= 'Z') {
+                console.log(a + 'is a uppercase letter');
+            } else if (a >= 'a' && a <= 'z') {
+                console.log(a + 'is a lowercase letter');
+            } else if (a >= 0 && a <= 9) {
+                console.log(a + 'is a number');
+            } else {
+                console.log(a + 'is a special symbol');
+            }
+        }
+    </script>
+</body>
+
+</html>

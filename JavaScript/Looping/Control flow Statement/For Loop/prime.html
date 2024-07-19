@@ -1,0 +1,27 @@
+// write a program to check number is prime or not.
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        prime();
+        function prime() {
+            let a = prompt('Enter a positive integer');
+            for (let i = 2; i <= a - 1; i++) {
+                if (a % i == 0) {
+                    console.log('Not Prime');
+                    return;
+                }
+            }
+            console.log('Prime');
+        }
+    </script>
+</body>
+
+</html>

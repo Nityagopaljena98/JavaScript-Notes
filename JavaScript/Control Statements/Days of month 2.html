@@ -1,0 +1,37 @@
+// write a program to take a year,month and count the perticular days of a month.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Days of a month 2</title>
+</head>
+
+<body>
+
+    <script>
+
+        function dayscount() {
+            let year = prompt('Enter a year');
+            let month = prompt('Enter a month number');
+            if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+                console.log(`${year} ===> ${month} ===> 31days`);
+            }
+            else if (month == 4 || month == 6 || month == 9 || month == 11) {
+                console.log(`${year} ===> ${month} ===> 30days`);
+            }
+            else if (month == 2) {
+                if (year % 400 == 0 || year % 4 == 0 && year % 100 != 0) {
+                    console.log(`${year} ===> ${month} ===> 29days`);
+                }
+                else {
+                    console.log(`${year} ===> ${month} ===> 28days`);
+                }
+            }
+        }
+        dayscount();
+    </script>
+
+</body>
+
+</html>

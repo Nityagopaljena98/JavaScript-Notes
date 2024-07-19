@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Numbers</title>
+</head>
+
+<body>
+    <script>
+        function printFibonacci() {
+
+            // let number = parseInt(prompt('Enter a positive number: '));
+
+            let number = 30;
+            let n1 = 0, n2 = 1, sum = 0;
+
+            console.log('Fibonacci Series:');
+            console.log(n1); // Print 0
+            console.log(n2); // Print 1
+
+            sum = n1 + n2;
+            while (sum <= number) {
+                console.log(sum);
+                n1 = n2;
+                n2 = sum;
+                sum = n1 + n2;
+            }
+        }
+        printFibonacci();
+    </script>
+</body>
+
+</html>

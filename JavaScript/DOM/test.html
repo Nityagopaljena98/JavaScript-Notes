@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="display">
+        <br>
+        <p style="display: none;">Lorem ipsum <span>dolor sit</span> amet.</p>
+
+    </div>
+
+
+    <script>
+
+        let displayTag = document.querySelector('#display');
+        console.log(displayTag.textContent);
+        console.log(displayTag.innerText);
+        console.log(displayTag.innerHTML);
+
+
+    </script>
+</body>
+
+</html>
+
+
+// text content properties will considered the spaces but innerText properties would not considerd the spaces.
+// textContent properties will not considered the style.
+// innerText properties will considered the style.
+// innerHTML properties returns the hitml elenents which are present inside selected tag.

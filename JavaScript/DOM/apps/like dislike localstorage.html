@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Likes and Dislikes Counter</title>
+
+    <!-- Bootstrap Icon LLiink  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <style>
+        body {
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 77, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        }
+
+        .container {
+            margin: 100px auto;
+            border: 5px solid #f70206;
+            box-shadow: 2px 2px 2px rgb(41, 161, 174);
+            border-bottom: 5px solid #f7ca00;
+            border-top: 5px solid #7f3bb0;
+            border-radius: 20px;
+            align-items: center;
+            text-align: center;
+            width: 400px;
+            height: 450px;
+            background-color: darkcyan;
+        }
+
+        .content {
+            margin: 60px auto;
+            align-items: center;
+            text-align: center;
+        }
+
+        button {
+            display: inline-flex;
+            padding: 15px;
+            margin-left: 20px;
+            width: 120px;
+            text-align: center;
+            justify-content: center;
+            background-color: chartreuse;
+            color: #000;
+            border: 1px solid rgb(0, 255, 34);
+            border-radius: 0px 20px;
+            font-size: 15px;
+            font-weight: 400;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            cursor: pointer;
+            transition: 0.6s;
+        }
+
+        button:hover {
+            background-color: rgb(14, 156, 188);
+            color: #fff;
+        }
+
+        i {
+            margin-right: 6px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+        }
+
+        span {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        #total-sum {
+            color: rgb(72, 227, 11);
+            font-size: 15px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 400;
+            border: 2px solid rgb(0, 183, 255);
+            border-radius: 10px;
+            width: 100px;
+            height: 20px;
+            padding: 15px;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://th.bing.com/th/id/R.03f40b67b63d9c1c1a5a792109bbc699?rik=8HhXk%2b5PP7XurQ&riu=http%3a%2f%2fpngimg.com%2fuploads%2finstagram%2finstagram_PNG10.png&ehk=%2f7%2ftghrL31GFpelB7DZvprao8IZHRvmhi0BpDsEAZgI%3d&risl=&pid=ImgRaw&r=0"
+                alt="" />
+        </div>
+        <div class="content">
+            <button class="likeBtn" onclick="incrementLikes()"><i class="bi bi-hand-thumbs-up"></i>Like<span
+                    id="likeCount">0</span></button>
+
+            <button class="dislikeBtn" onclick="incrementDislikes()"><i class="bi bi-hand-thumbs-down"></i>Dislike<span
+                    id="dislikeCount">0</span></button>
+        </div>
+
+        <span id="total-sum">Total Count = 0</span>
+    </div>
+
+    <!-- Script Cde  -->
+    <script>
+
+        let likeCount = 0;
+        let dislikeCount = 0;
+
+
+        if (localStorage.getItem("likeCount")) {
+            likeCount = parseInt(localStorage.getItem("likeCount"));
+            document.getElementById("likeCount").innerHTML = likeCount;
+        }
+
+        if (localStorage.getItem("dislikeCount")) {
+            dislikeCount = parseInt(localStorage.getItem("dislikeCount"));
+            document.getElementById("dislikeCount").innerHTML = dislikeCount;
+        }
+
+        // Update total count  
+        document.getElementById("total-sum").innerHTML = `Total Count = ${likeCount + dislikeCount}`;
+
+
+        document.querySelector(".likeBtn").addEventListener("click", () => {
+            likeCount++;
+            localStorage.setItem("likeCount", likeCount);
+            document.getElementById("likeCount").innerHTML = likeCount;
+            document.getElementById("total-sum").innerHTML = `Total Count = ${likeCount + dislikeCount}`;
+        });
+
+        document.querySelector(".dislikeBtn").addEventListener("click", () => {
+            dislikeCount++;
+            localStorage.setItem("dislikeCount", dislikeCount);
+            document.getElementById("dislikeCount").innerHTML = dislikeCount;
+            document.getElementById("total-sum").innerHTML = `Total Count = ${likeCount + dislikeCount}`;
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

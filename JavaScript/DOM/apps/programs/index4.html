@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="one">Header One</h1>
+    <h2 id="two">Header Two</h2>
+    <div id="brand-list">
+        <h1>Alcohol Brands</h1>
+
+        <ol>
+            <li>Old Monk</li>
+            <li class="j">Jack Daniels</li>
+            <li class="j">Black Dog</li>
+            <li>black & White</li>
+        </ol>
+
+        <a href="">a</a>
+        <a href="">b</a>
+    </div>
+
+    <!----------- JS Code  ------------------>
+    <script>
+        let h1tag = document.getElementById('one');
+        console.log(h1tag); // Return whatever written inside the perticular tag
+
+        //  If the id not match with the dom tree or tag name it return null. 
+        let h1tag2 = document.getElementById('oneeeeee');
+        console.log(h1tag2);  // null
+
+
+        let tagselecter = document.getElementsByTagName('li');
+        console.log(tagselecter);
+
+        let classselecter = document.getElementsByClassName('j');
+        console.log(classselecter);
+
+        // class name can be duplicate but id name should be unique .
+
+        let anyselecter_1 = document.querySelector('.j')
+        console.log(anyselecter_1);
+
+        let anyselecter_2 = document.querySelectorAll('.j');
+        console.log(anyselecter_2);
+
+        // querySelector return only first match tag 
+        // When we want to access all the maching tag name then we use quuerySelectorAll.
+
+
+        // To display the content of h1 tag 
+        let h1tag1 = document.getElementById('one');
+        let text_1 = h1tag.textContent;
+        console.log(text_1);
+
+        // To update the content or change the content of h2 tag 
+        let h2tag2 = document.querySelector('#two');
+        h2tag2.textContent = " I Love JS";
+
+    </script>
+</body>
+
+</html>

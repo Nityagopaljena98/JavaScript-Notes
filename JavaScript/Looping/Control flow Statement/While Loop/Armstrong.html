@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        main();
+        function main() {
+            let n = 153;
+            let len = 0;
+            let temp = n;
+            let sum = 0;
+            while (n > 0) {
+                len++;
+                n = Math.trunc(n / 10);
+            }
+            console.log(" length " + len);
+            n = temp;
+            while (n > 0) {
+                let rem = n % 10;
+                let mul = 1;
+                for (let i = 1; i <= len; i++) {
+                    mul = mul * rem;
+                }
+                sum = sum + mul;
+                n = Math.trunc(n / 10);
+            }
+            if (sum == temp) {
+                console.log(sum + " is an armstrong number");
+            } else {
+                console.log(sum + " is not an armstorng number");
+            }
+        }
+    </script>
+</body>
+
+</html>
